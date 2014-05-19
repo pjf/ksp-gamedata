@@ -1,0 +1,232 @@
+3.86
+	Added scale temporary models of LFT CSM and Engine. Needed them to make the Fairings the correct size and finishing balance on J2
+	Finally fixed the Control from here bug on the Big G docking port. Now orientated correctly.
+	Added science to Big G Docking, thanks to ParasiteX
+	Made the LEM EVA without opening the door. It was impossible to board an empty LEM with the door closed....
+	Fixed Missing RCS thrust in Gemini
+	Made the Angled fairings taller so every one could fit inside.
+	Increased the explosive force of the Fairings to get out of your way a bit better.
+
+3.85
+	Fixed white mercury window
+	Moved LEM decoupler to Structural
+	Balanced the RCS thrusters on Gemini pods.
+	Added Apollo Inst Unit, acts as a probe core. Maybe add some science to it later?
+	Shrank the APS 64%
+	Rotated the J2 fuel tank so KSP faced the correct direction
+	Fixed center of mass on LEM ascent module craft file, no more random spinning. The ladder leg and the un-ladder leg have different centers of mass.
+
+3.84
+	Added Proper LEM Structural ring, Should now let the flower unfold.
+	Added Rocket/RCS pack
+	Added Kerbal slots to launch tower, now at 16
+	Added forward RCS thrust to Gemini Realistic Utility pack took it away from rcs unit, moved rcs direction to real life directions
+	Added extra attach node to bottom of utility pack
+
+3.83
+	Added 2 new Gemini Aft sections, They now more closely represent the real ones they are taller and have the engines in the right section.
+	J2 Now has textures
+	Partially fixed collision issue with the launch towers. The should be less destructive to your rockets.
+
+3.82
+
+	Added J2 engine prototype. still needs textures but the model is done.
+	Gave the Mercury decouple a FAR drag parameter. Tell me if this needs to be tweaked
+	Fixed naming conflict with S1B wings and Winged Gemini.
+	Pulled out attach points on Towers to help with collision issues. Mind the gap!
+	
+3.81
+	Added S1B wings
+	Fixed balance issues with the lem and adjusted it's ascent module's center of mass
+	Legs for Lem are now Surface attach for easier multi purpose uses.
+	Added reflection textures to parts that should have them. Except the LEM, it was causing lag and was not a significant visual improvement.
+	If you have performance issues with reflections, delete the FASA/Plugin folder to return to the non reflection state.
+	Reflection shader should perform better.	
+
+3.80
+	Added first 2 plugins Raster prop monitor for the LEM and Reflection shader.
+	Added first round of Apollo parts, S1B Engine plate, H1 Engine, S1B Stage 1 LFT, J2 engine TEMPORARY MODEL, J2 fuel tank, J2 Adaptor, J2 Fairing decoupler, 
+	LM 4x fairings and attachment plate. 
+	Added DennyTX's Lunar Module with RPM IVA, Ascent and Descent stage and engines, lander legs, RCS
+	Added Probe Mini Parachute, Do not use on live subjects!!!
+	Removed IVA from Launch Towers, it didn't work well and the Misc folder is all you need to copy for just the towers now.
+	Increased Atlas main engine vac efficiency.
+	Added more Geiger counter science definitions.
+	Explorer probe data and MiniGoo is collectable on EVA now. Current missions will have to be restarted to see the effect.
+	Added science container to Rescue G pod...
+	Added .15 gimble to Atlas main engine
+	Reverted the Gemini Lander legs to there previous less broken state.
+	Combined the atlas long and short fuel tanks textures.
+3.73
+	Added H1 engine.
+	Made Gemini Shuttle easier to launch...
+3.72
+	Lowered thrust of LR91 to 255 and weight to 2.15
+	Made MOL cargo bay easier to place. Moved attach points around.
+	Removed Empty IVA, was causing problems with other mods.
+	Fixed MOL stack bays and Cap, can now attach to things.
+
+3.71
+	Added Geiger Counter Science part
+	Adjusted the Collision on the Big G pod. Should help with exploding Big G syndrome.
+	Tried and failed to fix X1 legs, they work but the animation is now broken...
+
+	
+
+3.7 Added launch tower, Redstone 1.25m Clamp and 2.5m Clamp, Atlas Radial Clamp, and Umbilical Tower.  
+		If your rocket "Pops" on load to the pad and is off center.  Reload your scene and it will fix it, sometimes. 
+	Added Stackable Equipment Part.
+	Added Mercury RCS thruster.
+	Added "Fairing" and "Cargo Bay" to part titles for FAR support.
+	Added Explorer probe and rocket parts 6 total...
+	Added Geiger Counter experiment.
+	Mercury Pod has RCS thruster part now, no more reaction wheel on the pod.
+	Increased Gemini LES thrust to 250.
+	Agena Antenna now weighs the same as other antenna's and science parts to make weight balancing easier.
+	Removed surface attach from Agena Docking.
+	Moved the MOL equipment to utility.
+	Fixed LR-91 Mini FX bug
+	Fixed Gemini Legs from falling through the ground and animation bug on white ones.
+	Increased Agena engine to 65. Decreased ISP to 395. Increased the mass to .45
+	Increased Agena FP Mono engine to 20. Increased ISP 415, makes a great interplanetary mono thruster now.
+	Increased the mass of mercury's parachute, now same as stock one. Helps with weirdness.
+	
+3.6 - Added Remote camera. Lets you do remote crew reports.
+	Added Laser Mass Spectrometer, lets you do remote soil samples.
+	Added take data to pods and radiometer
+	Mini Goo™ Radiometer lowered xmitDataScalar to 25% to compensate for its smaller size.
+	Docking nodes are all at size 0, multiple docking node sizes are no longer supported in .23. 
+	Also fixed the control from here alignment bug in Big G Docking part. Should work with auto docking mods now.
+	Big G Docking now has retro thrusters. Will fix properly later.
+	Swapped the stats for the mini orbital bertha and mini LR 91, visual sizes make more sense with the stats swapped.
+	Fixed multiple control surfaces on Winged Gemini's control surfaces and Redstone fin from showing up twice.
+3.5 - Fixes
+	Rotated cone to correct direction
+	LES uses cfg points to model directly
+	4X800Mini is now in the tech tree
+	Agena probe is now named correctly and should not mess up the MIRV core. Crafts that had agena will have Mirv core instead of agena now.
+	MIRV Core is now wider so warheads can be placed without clipping.
+	Moved Gemini White pieces to there black counter parts location on the tech tree.
+	Radiometer is now transferable from EVA like the goo container.
+	Fixed missing Mono in Agena Probe
+3.34 - Added MOL Science, and Equipment module, 
+	Added 7 segment SRB,
+	Added Agena Target Vehicle (Antenna, Docking, Probe, LFT, Flight Pack, Engine), 
+	Added Indexer to nose cone of Gemini, Added Gemini nosecone cap
+	Adjusted mercury engine collision, Use a decoupler on the bottom as a launch clamp.
+	Fixed Pod landing gear- Thank you Spann3
+	Added 0 thrust RCS module to fix the exploding VAB icons,
+	Added new tweakables to parts that use them,
+	Removed 0 electricity from parts.
+	Increased gimble on some engines
+	Tweaked textures to lower moire pattern on high detail textures. Some are now .tga for better mip mapping.
+	Decreased the crash tolerance on all the pods and other parts that were unrealistically high. Be careful now!
+	
+3.2 - Added White version of Big G, IIIe white Version for SRB, Old one now has the checker from IIIc. Added rescue flag.
+	Modified the first Mercury cap I did, It now serves as an adaptor to .625m parts
+	Added more weight to Big G and fixed its drag so it comes down butt first now.
+
+3.12 -  Added fairings - more fairings, Added fins for Mercury Redstone, Added Gemini landing legs and Rescue G. Added white variants of the silver Gemini tanks, Added 5 Segment SRB's
+	Added fairing to Atlas Booster engine
+	Shortened the Mercury Atlas long LFT by 1m so it was more visually accurate.
+	Tweaked tech node placement of Mercury rockets.
+	Minor balancing on engines.
+	Moved LES (Escape Towers) to the utility tab
+	Added the Gemini LES to tech tree (specializedControl)
+
+3.0 -  Added Mercury capsule, Mercury parachute cap, Mercury pod engine decoupler, 
+	Atlas main engine, Atlas booster, Atlas booster decoupler, Atlas fuel tank, Added part flags(they only show up at launch).
+	Moved winged Gemini Lower in the tech tree.
+	Lowered the bottom attach node on LR-87 so it did not clip when stacking.
+	Added additional science storage to Gemini
+	Lowered drag on Mercury parachute
+	Increased the strength of the centaur attach nodes, was exploding under light loads.
+
+2.42 - 	LR-91 Lowered thrust, tweaked efficiency and increased mass, slightly better second stage engine than others now.
+	Fixed LR-91Dec, doesnt clip now
+	Moved Fairings to lower science tech nodes
+	Fixed some textures, converted everything back to .png saved 30mb
+
+2.41 - Added Science First pass on tech tree!, Gemini AeroNosecone(no Docking Port), Gemini Antenna and Goo Irradiation device
+Bugged- control from here on Big G Docking ring is off by 90 degrees.
+	Added sounds to SRB
+	Decreased mass of Redstone engine
+	New Craft Files and Sub Assemblies
+	Reduced efficiency of LR91 and LR87
+	Increased thrust in MIRV
+	Decreased thrust in LR91
+	Removed the decoupler from the ICBM SAS 
+	Fixed small lander leg
+	Fixed Redstone engine collision bug
+	INcreased the resolution of Mercury Redstone fuel tank, (Blurriness was bugging me)
+
+2.3 – Added Big G flight pack, Gemini Escape Tower, Big G module, Big G flight pack docking part.
+	Added H2, O2, Rocket Fuel, RCS mini tanks
+	Gemini Pod RCS cap Now has 10 units of Mono in it
+	Removed the Reaction Wheel translation from the pod and SAS system.
+	Fixed collision on Gemini Pod, Should explode less on reloads
+	Added more detail to the SAS-RCS thrusters.
+	Decreased decouple force on dark decouplers
+	Increased the torque required to break engines and fuel tanks, was too low and exploding rockets on the pad
+	Made MIRV and LES decouple then fire instead of the other way around
+
+
+
+2.1 -- Added ICBM parts, Nosecone, MIRV Probe Core, SAS, amd MIRV Warhead
+	Added 2.5m Centaur CSM, same as Centaur engine just the fuel no engine
+	Separated RCS from pod works better now with sas and mech jeb. Also increased the rotational torque on the pod.
+	Increased the gimble range of LR87 Twin, should be easier to control.
+	Tweaked the staging of decouplers so they add up better.
+	Re-added engine taper to the Titan IIIc SRB, originally were there for NovaPunch compatibility.
+	Darkened Gemini white textures to help cure blindness
+	Added mono to lander legs, decreased fuel amount to compensate.
+	Added new SAS to Lander pod
+	Added attach nodes to Nosecone.
+	Created craft files.
+
+
+
+2.0 -- All new Gemini pod exterior,RCS is on the pod now.
+	Combined the RCS SAS decoupler into one part
+	Two new parachutes, drogue and regular, both are stack-able and can surface attach
+	New nosecones for your rockets, in 2.5 and 1.25m sizes
+	New decouplers and wall fairings. Though I highly recommend you use the procedural fairings mod from now on.
+	2 new 1.25m engines, Mini Orbital Bertha, and Mini 4x800
+
+1.7 --	Added the new ASAS system 
+	removed the ability to control Gemini without RCS thrusters
+
+1.5--
+
+Added the fairings I created from NP for the LR87Twin
+
+1.4--
+
+LR-91	- increased the weight slightly and efficiency, decreased thrust from 400 to 375, Tweaked collision
+
+Centaur_FuelEng, increased efficiency and thrust from 400 to 500
+
+LR-87 	- twin increased weight efficiency and thrust 750 to 900 
+
+Gemini Pod-Increased the amount of Mono Propellent on board. Decreased the charge rate for the fuel cell.  Decreased the electricity in the pod to a more reasonable 100. lowered the weight.
+
+Titan LFT short- removed excess o2
+Titan LFT med– rounded off fuel level to be exactly twice as much as the short one. 
+
+Fixed texture being off on LR-91
+
+Tweaked texture of Gemini_Dec_Lg
+
+Titan_LFT_Long rotated so words were up front
+
+FASA_Atlas_LFT_Cone reduced weight and fuel
+
+Fixed Gemini IVA
+
+Added Lander leg part
+
+FASA FLAG!!
+
+
+Added part to configs and updated to work with .20
+Thanks to  Nobody_1707 for the help.

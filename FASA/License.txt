@@ -1,0 +1,12 @@
+FASA is created and maintained by “Frizzank” @ KSP Forums, and is the author of the FASA mod.
+DennyTX is the author of the LM parts CSM and any others authored by him in the part cfg.
+DennyTX maintains sole ownership of the parts authored by him and they are used in FASA with permission from DennyTX.
+You must get written permission from Frizzank to use or redistribute this mod in other mods.
+Credit for the original Gemini mod goes to Tosh.
+
+Special thanks to
+SundayPunch
+NovaSilisko
+Captain Slug
+Tosh
+bac9
