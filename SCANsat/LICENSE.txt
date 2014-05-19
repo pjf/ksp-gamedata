@@ -1,4 +1,6 @@
 Copyright (c) 2013 damny <df.ksp@erinye.com>
+Copyright (c) 2014 David Grandy <david.grandy@gmail.com>
+Copyright (c) 2014 technogeeky <technogeeky@gmail.com>
 
 Redistribution and use in source and binary forms, with or without modifica-
 tion, are permitted provided that the following conditions are met:
@@ -36,6 +38,14 @@ All Rights Reserved - Milkshakefiend / Myles Hill
 
 Milkshakefiend has given permission that these models and textures may be
 distributed with SCANsat, including derived works, as long as credit is given.
+
+
+LICENSING INFORMATION FOR LOGO
+---------------------------------------------
+
+The logo was created by K3 | Chris in #kspmodders, and originally by the
+United States National Reconnaissance Office. Since they are a U.S. government
+organization, their logo patch is public domain, and therefore so is this logo.
 
 
 LICENSING INFORMATION FOR THIRD-PARTY LIBRARIES

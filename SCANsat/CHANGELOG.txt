@@ -1,7 +1,70 @@
-Names in () are forum names of people who suggested the feature/found the bug.
+Version 6.0 - 2014-05-17 (frozen by tg)
+------------------------
+
+* Update for KSP version 0.23.5. This version of SCANsat now requires KSP 0.23.5.
+
+Major Changes:
+
++ [NEW] Big Map Caching. When not scanning, rendering of the Big Map is much, much faster. [Thanks! DMagic!]
+
+* [KNOWN ISSUE] Sometimes the cache is not properly updated, resulting in strange looking Big Maps.
+				Use the map resize button ( [\\], right hand size), resize the map a bit.
+				This will reset the cache, and fix whatever is wrong.
+
++ [NEW] [OPTIONAL] Toolbar support. Strongly suggested, because the experience
+	is better and more consistent with the Toolbar. [thanks DMagic!]
+
+- [REMOVED] Removed the old expanding/contracting floating SCANsat button. Replaced instead with
+	either a Toolbar toolbar or with nothing, but maps become visible upon starting a scan. [Thanks Dmagic!]
+
++ [DOCS] New README docuemntation is in Markdown format, see: https://github.com/S-C-A-N/SCANsat [tg]
+
++ [DOCS] New documentation in the form of imgur albums, see: https://scansat.imgur.com/ [tg]
+
++ [INFO] Future releases can be found here: https://github.com/S-C-A-N/SCANsat/releases/latest [tg]
+
++ [INFO] Source code can be found here: https://github.com/S-C-A-N/SCANsat [tg]
+
+Minor Changes:
+
++ [NEW] Added support for showing the vessel icons for Asteroids in orbit around the same
+			mainBody. [tg]
+
++ [NEW] Include SCANsatRPM by default in packaging. [tg]
+
++ [NEW] S.C.A.N. logo [thanks K3 | Chris!]
+
+- [REMOVED] Non-animated parts no longer show an 'Extend' option in EDITOR. [DMagic]
+
++ [COMPATABILITY] "Change access modifiers to allow for more control from RPM". [thanks Dmagic!]
+
++ [BUGFIX] The Multispectral scanner should now be easier to highlight and click. [tg]
+
++ [BUGFIX] Scanning high inclinations with wide-enough FOV scanners
+	(ie, Multi, RADAR, but not SAR) will no longer reveal the opposite polar region. [thanks DMagic!]
+	[example orbit]:  Minmus 250.000x250.000km @ 91.0 degrees
+
+
+Internal (Developer) Changes:
+
+The following changes are only important for SCANsat or other module developers:
+
++ [dev] version number hardcoded, now "1.0.6.0" until version 6.1 ("1.0.6.1") or 7.0 ("1.0.7.0"). [tg]
++ [dev] Support for changing what you define as 'sea level'. Compiled to be default (ie, 0). [tg]
+- [dev] Removed all unused declerations [tg]
++ [dev] Abstracted some lat/long functions to lambdas. [tg]
++ [dev]	switched to Windows line endings. [tg]
+- [dev] removed windows commands in .csproj and .sln. [tg]
++ [dev] added unix commands. [tg]
++ [dev] added debugging and profiling support. Includes dummy executable. [tg]
++ [dev] [requires] that the SCANsat.dll be put directly in place (ie, GameData\SCANsat\.)
+			for debugging to work [tg]
+
 
 Build 5 - 2013-12-18
 --------------------
+
+- Update for KSP version 0.23. This version of SCANsat now requires KSP 0.23.
 
 - Fixes for minor incompatibilities with Unity 4.2.2.
 
@@ -40,6 +103,7 @@ Build 5 - 2013-12-18
   have been updated. (OrtwinS)
 
 - The instruments window got its own close button. (DMagic)
+
 
 
 Build 4 - 2013-11-10
