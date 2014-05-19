@@ -1,0 +1,53 @@
+@PART[RLA_rcs_linear]
+{
+	@MODEL
+	{
+		rotation = 180, 0, 0
+	}
+	MODEL
+	{
+		model = RLA_Stockalike/Parts/Engine/RLA_mp_small/small
+		scale = 0.01, 0.01, 0.01
+		position = 0.0, -0.06, 0.0
+	}
+	node_stack_top = 0.0, 0.01, 0.0, 0.0, 1.0, 0.0, 0
+	node_stack_bottom = 0.0, -0.15, 0.0, 0.0, 1.0, 0.0, 0
+
+	@attachRules = 1,1,1,0,1
+	@mass = 0.02
+	// --- FX definitions ---
+
+	fx_gasJet_tiny = 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, running
+
+	// --- Sound FX definition ---
+
+	//sound_vent_medium = engage
+	//sound_jet_deep = running
+	//sound_vent_medium = disengage
+	//sound_vent_large = flameout
+	!MODULE[ModuleRCS] {}
+	
+	MODULE
+	{
+		name = ModuleEngines
+		thrustVectorTransformName = thrustTransform
+		exhaustDamage = False
+		ignitionThreshold = 0.1
+		minThrust = 0
+		maxThrust = 0.8
+		heatProduction = 50
+		fxOffset = 0, 0, 0.1
+		PROPELLANT
+		{
+			name = MonoPropellant
+				ratio = 1.0
+			DrawGauge = True
+		}
+		atmosphereCurve
+		{
+		 key = 0 260
+		 key = 1 100
+		}
+		
+	}
+}
