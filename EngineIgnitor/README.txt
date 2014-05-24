@@ -1,0 +1,1 @@
+Extract all cfg files to your /GameData/EngineIgnitor/ folder (in case you've installed the plugin there).
