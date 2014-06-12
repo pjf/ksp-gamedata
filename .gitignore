@@ -19,3 +19,8 @@ SimplePartOrganizer/PluginData/
 kOS/Plugins/PluginData/
 FinalFrontier.dat
 Diazo/AGExt/AGExt.cfg
+PartCatalog/Plugins/PluginData/PartCatalog/catalog.txt
+PartCatalog/Plugins/PluginData/PartCatalog/config.xml
+PartCatalog/Plugins/PluginData/PartCatalog/lastParts.txt
+PartCatalog/Plugins/PluginData/PartCatalog/partString.lua
+
