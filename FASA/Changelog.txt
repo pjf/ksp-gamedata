@@ -1,3 +1,125 @@
+4.92
+	Added FAR drag overrides to wack-a-doo Apollo engines and plates
+	Added firesplitter animation module to mol doors.
+	Added Connected Living space module to Apollo, Big G, Big G docking and Apollo docking devices. Gemini and Mercury are EVA only as intended.
+	Added TAC Lifesupport support to pods.
+	Added Deadly Reentry modules for Gemini,Big G, Gemini wing and Mercury
+	Added craft files for Big G, ICBM,
+	Added a hatch to Big G docking so you know where to get in and out of...
+	Updated Raster Prop Mon. to .17
+	Fixed center of mass on Big G docking. Moved ship into alignment so Kerbals could get into and out of easier. Part should be replaced...
+	Removed Big G geiger counter and gravity scan, list was full and caused errors
+	Fixed ICBM Inverted placement.
+	Edited Launch Tower staging to help with random placement in the list, increased its mass to help with jumping
+	Also shortened the umbilical to help with collision. Collision issues where causing the jumping and destruction of rockets at launch.
+	Removed 4 attach nodes from J2 plate, it was too difficult to attach the decoupler.
+
+
+
+4.91
+	Fixed the small attach nodes on RL-10 engine
+	adjusted the ISP for the LR-91, LR-87 (was backwards), and Redstone A-6 engine closer to real world values.
+	fixed typo in transtage CSM cfg
+	Rebalanced the RCS thrust on Gemini components.
+	Added a bit more thrust to the J2
+	Added more attach nodes to the F1 plate.
+	Added mono APU to Apollo SM
+	Increased the thrust on the Apollo RCS and APS
+	Scaled the Nova down some it was hard to place and gave the impression that it was more powerful than the F-1.
+	Tweaked fuel and masses of Nova parts. Nova tank has less fuel now.
+	Reduced the amount of fuel and weight in the Mercury short LFT and consolidated some of the textures.
+	Added a double sized 2.5m version of the Mercury Short LFT
+	Added Craft files for Agena, Agena Atlas, Voyager 2 (Centaur), Agena Centaur, And Nova
+	
+
+
+4.90
+	Added Centaur engine plate, renamed old Centaur Transtage to just Transtage.  --Delete your old files or you will have conflicts.--
+	Added RL-10 engine
+	Increased mass on Agena engine, it was too light. Made it slightly stronger and more efficient.
+	Increased the fuel in Agena tank.
+	Increased the thrust in Agena Flight Pack and slightly less efficient.
+	Added collision checking for Apollo engines.
+	Increased fuel in Nova tank.
+
+
+4.80
+	Added Gemini Light, small radial spotlight for Gemini.
+	Added small and medium explorer probe sized fuel tanks.
+	Added Nova M1 engine, 7.5m fuel tank, engine mount, and adaptor decoupler.
+	Added Mini Solar Panel.
+	Increased the thrust on the F-1  engine some.
+	Moved "Gemini Large Liquid Fuel Tank" to TechRequired = heavyRocketry with the rest of Gemini
+	Scaled down the laser mass spectrometer to be the same size as other science parts.
+	Made Gemini Pods weak reaction wheels electric so it is in line with the stock game and some control can be maintained.
+	
+4.70
+	Updated Raster Prop Monitor to latest version
+	Added Apollo launch clamps.
+	Removed engine response speed for F1 
+	Updated sound for F1. It's loud now!
+	Changed fx for SRB's to be more beefy, can finally get rid of dupe sound folders...
+
+4.60
+	Removed the reflection shader form dennys SM and CM, they were causing huge amounts of lag.
+	Took a pass on the tech tree for all the parts, should be more fun/balanced now and less MIA parts.
+	Moved Sargent (Explorer SRB) nodes to make placement a bit more intuitive and useful for other small probes.
+	Added craft files back in and included some history blurbs.
+	
+
+4.50	
+	Added proper textures to Stage 1 and 2 of Saturn V
+	Added a 5m decoupler with retrorockets for the top of your Stage 1 separation
+	changed the fairings icon to horizontal.
+	F1 engines now have a slower ramp up time, be careful.
+	Added more fuel to SV stage 1.
+4.40 
+	Added back in fixed Launch Escape Tower.
+	Added texture to first stage Sv rocket
+	added FX to F1 engine
+	Changed some textures to png instead of TGA
+	Atlas Short LFT has less fuel than the tall one now.
+	Moved Mercury pod and components from start to basic rocketry. 
+	Mercury Pod Lights now use more electricity
+	Fixed backwards efficiency of Redstone engine
+
+4.30
+	Made J2 lighter, stronger and more efficient to compensate for its 3rd stage deployment
+	Added more fuel to SV first and second stages
+	Tweaked Reflection update timing on CM and SM to cause less hiccups
+	Lowered thrust and increased efficiency on F1 engines.
+	Increased the SM RCS thrust to balance out translation with LEM attached.
+
+4.20
+	Integrated Denny's Apollo CSM parts - LES is broken and has been disabled
+	Added texture to F1 engine	
+	Renamed Denny's parts to avoid conflicts.
+
+4.10
+	Adjusted stack node sizes, 2m parts get size 2, 3m and up get size 3
+	Added more mass to the fuel tanks and other really light Apollo parts. Mass greatly effects joint strengths.
+	Tweaked F1 engine thrust and weight
+	Adjusted reflection shader on engines some so emission would show through.
+	Shorten the 3 to 5m decoupler
+	Added longer pipes to J2 so you didn't see its ends
+	
+	
+	
+4.00 Added Saturn V rocket parts,
+	F1 LFE
+	F1 5x engine plate
+	F1 Engine fairings
+	5m Large fuel tank
+	5m Medium fuel tank
+	J2 5x engine plate
+	3.75m to 5m decoupler
+	5m Decoupler
+	Adjusted the attach nodes on the umbilical towers to be more centred and closer to the rocket.
+	Turned down Gimble on SRB's
+	Made H1 Gimble be the engine nozzle and not the thrust transform like its suppose to.
+	Turned down the drag on all the parachutes made them deploy slower.
+	Fixed stack symmetry on s1b plate, gave it some fuel and moved it to propulsion with the other plates.
+
 3.86
 	Added scale temporary models of LFT CSM and Engine. Needed them to make the Fairings the correct size and finishing balance on J2
 	Finally fixed the Control from here bug on the Big G docking port. Now orientated correctly.
