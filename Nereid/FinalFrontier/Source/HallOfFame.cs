@@ -491,7 +491,7 @@ namespace Nereid
          }
 
 
-         public List<Ribbon> GetRibbonsOfLatestMission(ProtoCrewMember kerbal)
+         public List<Ribbon> GetRibbonsOfLatestMission(ProtoCrewMember kerbal, double missionEndTime=0)
          {
             List<Ribbon> result = new List<Ribbon>();
             HashSet<Ribbon> ignored = new HashSet<Ribbon>();
@@ -504,7 +504,7 @@ namespace Nereid
             foreach(LogbookEntry logentry in log)
             {
                String code = logentry.Code;
-               if (code.Equals(codeRecover))
+               if (code.Equals(codeRecover) )
                {
                   start = true;
                }
@@ -512,7 +512,7 @@ namespace Nereid
                {
                   break;
                }
-               else if(start)
+               else if (start || logentry.UniversalTime <= missionEndTime)
                {
                   Ribbon ribbon = RibbonPool.instance.GetRibbonForCode(code);
                   if(ribbon!=null)

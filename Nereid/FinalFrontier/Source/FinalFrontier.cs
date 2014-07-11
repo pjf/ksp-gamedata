@@ -29,7 +29,6 @@ namespace Nereid
          private volatile bool keyAltPressed = false;
          private volatile bool keyCtrlPressed = false;
 
-
          public void Awake()
          {
             wokenupCount++;
@@ -117,7 +116,7 @@ namespace Nereid
                       toggleBrowserVisibility();
                    };
 
-               button.Visibility = new GameScenesVisibility(GameScenes.EDITOR, GameScenes.FLIGHT, GameScenes.SPACECENTER, GameScenes.TRACKSTATION);
+               button.Visibility = new GameScenesVisibility(GameScenes.EDITOR, GameScenes.FLIGHT, GameScenes.SPACECENTER, GameScenes.TRACKSTATION, GameScenes.SPH);
             }
             else
             {

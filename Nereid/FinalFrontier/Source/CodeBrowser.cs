@@ -70,7 +70,7 @@ namespace Nereid
             GUILayout.EndScrollView();
             GUILayout.EndVertical();
 
-            GUI.DragWindow();
+            DragWindow();
          }
 
          public override int GetInitialWidth()

@@ -35,7 +35,7 @@ namespace Nereid
             return HEIGHT;
          }
 
-         public Texture2D getTexture()
+         public Texture2D GetTexture()
          {
             return texture;
          }

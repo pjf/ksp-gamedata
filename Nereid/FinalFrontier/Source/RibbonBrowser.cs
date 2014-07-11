@@ -38,7 +38,7 @@ namespace Nereid
                foreach (Ribbon ribbon in RibbonPool.instance)
                {
                   GUILayout.BeginHorizontal(FFStyles.STYLE_RIBBON_AREA);
-                  GUILayout.Label(ribbon.getTexture(), FFStyles.STYLE_SINGLE_RIBBON);
+                  GUILayout.Label(ribbon.GetTexture(), FFStyles.STYLE_SINGLE_RIBBON);
                   GUILayout.Label(ribbon.GetName() + ": " + ribbon.GetText(), FFStyles.STYLE_RIBBON_DESCRIPTION);
                   GUILayout.EndHorizontal();
                }
@@ -49,7 +49,7 @@ namespace Nereid
            
             GUILayout.EndVertical();
 
-            GUI.DragWindow();
+            DragWindow();
          }
 
          public override int GetInitialWidth()

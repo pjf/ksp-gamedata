@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.IO;
 
 namespace Nereid
@@ -298,8 +297,6 @@ namespace Nereid
          {
             String filename = CONFIG_BASE_FOLDER + FILE_NAME;
             Log.Info("storing configuration in "+filename);
-            Log.Detail("DETAIL");
-            Log.Trace("TRACE");
             try
             {
                using (BinaryWriter writer = new BinaryWriter(File.Open(filename, FileMode.Create)))

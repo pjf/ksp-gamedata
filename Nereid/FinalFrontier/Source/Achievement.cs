@@ -259,7 +259,7 @@ namespace Nereid
 
          public override bool Check(HallOfFameEntry entry)
          {
-            return entry.MissionsFlown == value;
+            return entry.MissionsFlown >= value;
          }
 
          public override String GetText()
@@ -358,9 +358,9 @@ namespace Nereid
             if (previous == null) return false;
             if (current.Situation == Vessel.Situations.PRELAUNCH) return false;
             if (current.Situation == Vessel.Situations.LANDED) return false;
-            if (previous.altitude > current.MainBody.maxAtmosphereAltitude) return false;
-            // no main celestial body? we have to be deep in space then
+            // no man celestial body? we have to be deep in space then
             if (current.MainBody == null) return true;
+            if (previous.altitude > current.MainBody.maxAtmosphereAltitude) return false;
             if (current.altitude <= current.MainBody.maxAtmosphereAltitude) return false;
             return true;
          }
@@ -780,6 +780,7 @@ namespace Nereid
             if (current == null) return false;
             if (previous == null) return false;
             if (current.IsEVA) return false;
+            if (double.IsNaN(current.Origin.geeForce)) return false;
             if (current.Origin.geeForce  < value)  return false;
             return true;
          }

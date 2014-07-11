@@ -98,7 +98,7 @@ namespace Nereid
                            GUILayout.BeginHorizontal(STYLE_LINE);
                         }
                         String tooltip = ribbon.GetName() + "\n" + ribbon.GetText();
-                        GUILayout.Button(new GUIContent(ribbon.getTexture(), tooltip), FFStyles.STYLE_RIBBON);
+                        GUILayout.Button(new GUIContent(ribbon.GetTexture(), tooltip), FFStyles.STYLE_RIBBON);
                         n++;
                         if (n % RIBBONS_PER_LINE == 0) GUILayout.EndHorizontal();
                      }
@@ -119,7 +119,7 @@ namespace Nereid
             GUILayout.EndScrollView();            
          }
 
-         public void SetSummaryForVessel(ProtoVessel vessel)
+         public void SetSummaryForVessel(ProtoVessel vessel, double missionEndTime = 0)
          {
             Summaries.Clear();
             this.vessel = vessel;
@@ -129,7 +129,7 @@ namespace Nereid
             {
                Summary summary = new Summary(kerbal);
                Summaries.Add(summary);
-               foreach(Ribbon ribbon in HallOfFame.instance.GetRibbonsOfLatestMission(kerbal))
+               foreach (Ribbon ribbon in HallOfFame.instance.GetRibbonsOfLatestMission(kerbal, missionEndTime))
                {
                   summary.newRibbons.Add(ribbon);
                }

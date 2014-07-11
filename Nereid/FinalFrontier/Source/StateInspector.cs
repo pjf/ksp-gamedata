@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Nereid
 {
@@ -11,8 +10,7 @@ namespace Nereid
       // class for inspecting simple states, such as change in vessel altitute, mach number  or change in Gee-Force
       public abstract class StateInspector<T>
       {
-         private bool changed = false;
-         //private Action method = null;
+         private volatile bool changed = false;
 
          public abstract void Inspect(T x);
 
@@ -79,13 +77,13 @@ namespace Nereid
             int alt1000k = 1000*(int)Math.Truncate(altitide/1000);
             if (alt1000k > lastAltitudeAsMultipleOf1k)
             {
-               Log.Info("alt increasing to " + alt1000k);
+               if(Log.IsLogable(Log.LEVEL.DETAIL))  Log.Detail("altitude increasing to " + alt1000k);
                this.lastAltitudeAsMultipleOf1k = alt1000k;
                Change();
             }
             else if (alt1000k < lastAltitudeAsMultipleOf1k)
             {
-               Log.Info("alt decreasing to " + alt1000k);
+               if(Log.IsLogable(Log.LEVEL.DETAIL))  Log.Detail("altitude decreasing to " + alt1000k);
                this.lastAltitudeAsMultipleOf1k = alt1000k;
                Change();
             }
@@ -106,8 +104,9 @@ namespace Nereid
             double gForce = vessel.geeForce;
             if (gForce > maxGeeForce)
             {
+               if(Log.IsLogable(Log.LEVEL.DETAIL)) Log.Detail("max gee force increased to " + gForce);
                this.maxGeeForce = gForce;
-               StateHasChanged();
+               Change();
             }
          }
 
@@ -126,9 +125,8 @@ namespace Nereid
             bool inAtmosphere = vessel.IsInAtmosphere();
             if (this.inAtmosphere != inAtmosphere)
             {
-               Log.Detail("AtmosphereInspector:: atmosphere " + (inAtmosphere ? "entered" : "leaved"));
                this.inAtmosphere = inAtmosphere;
-               StateHasChanged();
+               Change();
             }
          }
 

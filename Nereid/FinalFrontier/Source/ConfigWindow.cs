@@ -45,7 +45,7 @@ namespace Nereid
             LogLevelButton(Log.LEVEL.TRACE, "TRACE");
             GUILayout.EndHorizontal();
             // Reset Window Postions
-            if (GUILayout.Button("Reset Window Postions", FFStyles.STYLE_BUTTON))
+            if (GUILayout.Button("Reset Window Positions", FFStyles.STYLE_BUTTON))
             {
                PositionableWindow.ResetAllWindowPositions();
             }
@@ -93,7 +93,7 @@ namespace Nereid
 
 
             GUILayout.EndVertical();
-            GUI.DragWindow();
+            DragWindow();
          }
 
          private void LogLevelButton(Log.LEVEL level, String text)

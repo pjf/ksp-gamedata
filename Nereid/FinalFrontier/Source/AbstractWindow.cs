@@ -6,7 +6,7 @@ namespace Nereid
 {
    namespace FinalFrontier
    {
-      public abstract class AbstractWindow
+      public abstract class AbstractWindow 
       {
          public static readonly int AUTO_HEIGHT = -1;
          private static readonly int DEFAULT_WIDTH = 400;
@@ -19,7 +19,6 @@ namespace Nereid
          private Vector2 tmp = new Vector2(0,0);
 
          private String tooltip;
-
 
          public AbstractWindow(int id, string title) 
          {
@@ -50,6 +49,11 @@ namespace Nereid
          {
          }
 
+         protected void DragWindow()
+         {
+            GUI.DragWindow();
+         }
+
          private void OnDraw()
          {
             if (visible)
@@ -67,11 +71,40 @@ namespace Nereid
 
          private void OnWindowInternal(int id)
          {
+            if (Log.IsLogable(Log.LEVEL.TRACE)) Log.Trace("OnWindowInternal for ID "+id+" called; x="+bounds.x+", y="+bounds.y);
             mousePosition.x = Input.mousePosition.x - bounds.x;
             mousePosition.y = (Screen.height - Input.mousePosition.y) - bounds.y - FFStyles.STYLE_WINDOW.border.top;
             OnWindow(id);
             DrawTooltip();
             OnDrawFinished(id);
+            CheckBounds();
+         }
+
+         private void CheckBounds()
+         {
+            const float MARGIN = 5;
+            if (bounds.x > Screen.width - MARGIN)
+            {
+               Log.Warning("WINDOW "+id+" OUT OF SCREEN (x=" + bounds.x+"); resetting x coordinates");
+               bounds.x = Screen.width - bounds.width;
+            }
+            if (bounds.x + bounds.width < MARGIN)
+            {
+               Log.Warning("WINDOW " + id + " OUT OF SCREEN (x=" + bounds.x + "); resetting x coordinates");
+               bounds.x = 0;
+            }
+
+            if (bounds.y > Screen.height - MARGIN)
+            {
+               Log.Warning("WINDOW " + id + " OUT OF SCREEN (y=" + bounds.y + "); resetting y coordinates");
+               bounds.y = Screen.height - bounds.height;
+            }
+            if (bounds.y + bounds.height < MARGIN)
+            {
+               Log.Warning("WINDOW " + id + " OUT OF SCREEN (y=" + bounds.y + "); resetting y coordinates");
+               bounds.y = 0;
+            }
+
          }
 
          protected virtual void OnDrawFinished(int id)
@@ -107,6 +140,7 @@ namespace Nereid
             if (!this.visible && visible) OnOpen();
             if (this.visible && !visible) OnClose();
             this.visible = visible;
+            if (Log.IsLogable(Log.LEVEL.TRACE) && visible) Log.Trace("set window ID "+id+" to visible");
          }
 
          public bool IsVisible()

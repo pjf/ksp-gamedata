@@ -57,7 +57,7 @@ namespace Nereid
             GUILayout.EndVertical();
             if (GUILayout.Button("Close", FFStyles.STYLE_BUTTON)) SetVisible(false);
             GUILayout.EndHorizontal();
-            GUI.DragWindow();
+            DragWindow();
          }
       }
 

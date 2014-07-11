@@ -70,6 +70,7 @@ namespace Nereid
 
          protected override void OnWindow(int id)
          {
+            if (Log.IsLogable(Log.LEVEL.TRACE)) Log.Trace("drawing of decoration board started (mode="+mode+")");
             GUILayout.BeginVertical();
             // detailed statistics
             GUILayout.BeginVertical(HighLogic.Skin.scrollView);
@@ -155,7 +156,8 @@ namespace Nereid
             GUILayout.EndScrollView();
             GUILayout.EndVertical();
             //
-            GUI.DragWindow();
+            DragWindow();
+            if (Log.IsLogable(Log.LEVEL.TRACE)) Log.Trace("drawing decoration of board finished");
          }
 
          private void CloseButton()
@@ -221,7 +223,7 @@ namespace Nereid
                   GUILayout.BeginHorizontal();
                   Achievement achievement = ribbon.GetAchievement();
                   String tooltip = ribbon.GetName();
-                  GUIContent content = new GUIContent(ribbon.getTexture(), tooltip);
+                  GUIContent content = new GUIContent(ribbon.GetTexture(), tooltip);
                   if (GUILayout.Button(content, FFStyles.STYLE_RIBBON))
                   {
                      selected = ribbon;
@@ -261,7 +263,7 @@ namespace Nereid
             GUILayout.BeginVertical();
             if (ribbon != null)
             {
-               GUIContent content = new GUIContent(ribbon.getTexture(), customRibbonName);
+               GUIContent content = new GUIContent(ribbon.GetTexture(), customRibbonName);
                GUILayout.Label(content, FFStyles.STYLE_SINGLE_RIBBON);
             }
             else
@@ -332,7 +334,7 @@ namespace Nereid
             {
                if (n % RIBBONS_PER_LINE == 0) GUILayout.BeginHorizontal();
                String tooltip = ribbon.GetName();
-               GUIContent content = new GUIContent(ribbon.getTexture(), tooltip);
+               GUIContent content = new GUIContent(ribbon.GetTexture(), tooltip);
                GUILayout.Label(content, FFStyles.STYLE_SINGLE_RIBBON);
                n++;
                if (n % RIBBONS_PER_LINE == 0) 
@@ -354,7 +356,7 @@ namespace Nereid
             foreach (Ribbon ribbon in entry.GetRibbons())
             {
                Achievement achievement = ribbon.GetAchievement();
-               GUIContent content = new GUIContent(ribbon.getTexture(), customRibbonName);
+               GUIContent content = new GUIContent(ribbon.GetTexture(), customRibbonName);
                GUILayout.BeginHorizontal();
                if (GUILayout.Toggle(revocation.Contains(ribbon), "", FFStyles.STYLE_NARROW_TOGGLE))
                {

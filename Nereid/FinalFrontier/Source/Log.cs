@@ -34,7 +34,7 @@ namespace Nereid
             return level == Log.level;
          }
 
-         private static bool IsLogable(LEVEL level)
+         public static bool IsLogable(LEVEL level)
          {
             return level <= Log.level;
          }

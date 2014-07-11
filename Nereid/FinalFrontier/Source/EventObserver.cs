@@ -245,8 +245,9 @@ namespace Nereid
             {
                if (FinalFrontier.configuration.IsMissionSummaryEnabled())
                {
+                  double technicalMissionEndTime = Planetarium.GetUniversalTime();
                   MissionSummaryWindow missionSummaryWindow = new MissionSummaryWindow();
-                  missionSummaryWindow.SetSummaryForVessel(vessel);
+                  missionSummaryWindow.SetSummaryForVessel(vessel, technicalMissionEndTime);
                   missionSummaryWindow.SetVisible(true);
                }
             }
@@ -512,6 +513,7 @@ namespace Nereid
 
          private void ResetInspectors()
          {
+            if (Log.IsLogable(Log.LEVEL.DETAIL)) Log.Detail("rest of inspectors");
             machInspector.Reset();
             altitudeInspector.Reset();
             geeForceInspector.Reset();

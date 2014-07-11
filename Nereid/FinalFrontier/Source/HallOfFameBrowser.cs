@@ -270,6 +270,7 @@ namespace Nereid
 
          protected override void OnWindow(int id)
          {
+            
             if (HallOfFame.instance == null) return;
             //
             // persistent filter for displaying kerbals
@@ -306,6 +307,7 @@ namespace Nereid
                   // butto to open decoration board
                   if(GUILayout.Button(new GUIContent(entry.GetName(), buttonTooltip), STYLE_KERBAL_BUTTON))
                   {
+                     Log.Detail("opening decoration board for kerbal " + entry.GetName());
                      display.SetEntry(entry);
                      display.SetVisible(true);
                   }
@@ -380,8 +382,8 @@ namespace Nereid
             {
                expandedRibbonAreaIndex = -1;
             }
-
-            GUI.DragWindow();
+            
+            DragWindow();
 
          }
 
@@ -459,7 +461,7 @@ namespace Nereid
             {
                if (n % RIBBONS_PER_LINE == 0) GUILayout.BeginHorizontal();
                String tooltip = ribbon.GetName() + "\n" + ribbon.GetText();
-               GUILayout.Button(new GUIContent(ribbon.getTexture(), tooltip), FFStyles.STYLE_RIBBON);
+               GUILayout.Button(new GUIContent(ribbon.GetTexture(), tooltip), FFStyles.STYLE_RIBBON);
                n++;
                if (n % RIBBONS_PER_LINE == 0) GUILayout.EndHorizontal();
                if (n >= max) break;
@@ -471,13 +473,12 @@ namespace Nereid
          protected void DrawRibbon(int x, int y, Ribbon ribbon, int scale = 1)
          {
             Rect rect = new Rect(x, y, ribbon.GetWidth() / scale, ribbon.GetHeight() / scale);
-            GUI.DrawTexture(rect, ribbon.getTexture());
+            GUI.DrawTexture(rect, ribbon.GetTexture());
          }
 
          protected override void OnOpen()
          {
             base.OnOpen();
-            //SetPosition(150, 50);
             HallOfFame.instance.Refresh();
             if (toolbarButton != null)
             {
