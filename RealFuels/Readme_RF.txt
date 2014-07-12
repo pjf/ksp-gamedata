@@ -40,6 +40,18 @@ AN OVERVIEW OF FUEL TYPES AND TECH LEVELS/ENGINE TYPES ARE BELOW THE CHANGELOG
 
 ==========
 Changelog:
+v6.4 \/
+*Allow fuselages to hold life support resources
+*Allow CONFIGs to have techRequired items (can limit available Engine Configs based on R&D nodes researched)
+*Fix service modules to not start full when TACLS/ECLSS is installed
+
+v6.3 \/
+*Add Roxette's Spaceplane Plus support
+*Fix HGR so engines are not modified (done via engine config sets instead)
+*Add RedAV8R's Kethane volume fixes
+*Update ECLSS config; add TACLS config. Both should work correctly when their respective mods are present and not do anything when they're not.
+*Made the refueling pump toggleable (in VAB/SPH and in flight)
+
 v6.2 \/
 *Added new fuels from RedAV8R
 *Updated HGR patch from Sandworm
